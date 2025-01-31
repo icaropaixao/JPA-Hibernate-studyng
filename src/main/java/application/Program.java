@@ -10,9 +10,9 @@ public class Program {
 
     public static void main(String[] args) {
 
-        Pessoa p1 = new Pessoa(null,"Ícaro","icaro@email");
-        Pessoa p2 = new Pessoa(null,"Nico","Nico@email");
-        Pessoa p3 = new Pessoa(null,"Manu","Manu@email");
+        Pessoa p1 = new Pessoa(null, "Ícaro", "icaro@email");
+        Pessoa p2 = new Pessoa(null, "Nico", "Nico@email");
+        Pessoa p3 = new Pessoa(null, "Manu", "Manu@email");
 
         // Cria a fábrica de EntityManager usando a unidade de persistência "exemplo-jpa" (definida no persistence.xml).
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
@@ -27,5 +27,8 @@ public class Program {
         em.getTransaction().commit(); // confimando alterações
 
         System.out.println("Finish");
+        em.close();
+        emf.close();
+
     }
 }

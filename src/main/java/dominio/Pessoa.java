@@ -45,11 +45,10 @@ public class Pessoa implements Serializable {
 
     @Override
     public String toString() {
-        return "Pessoa " + id +" "+
-                "nome='" + nome + '\'' +
-                ", id=" + id +
-                ", email='" + email + '\'' +
-                '}';
+        return "Dados Solicitados: " +
+                "\nnome= " + nome +
+                "\nid= " + id +
+                "\nemail= " + email;
     }
 
 }
